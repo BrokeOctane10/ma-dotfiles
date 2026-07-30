@@ -1,0 +1,98 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# Format
+format = """
+$cmd_duration $directory$git_branch
+  $character"""
+
+[fill]
+symbol = '-'
+style = 'fg:#45475a'
+
+# Character module (prompt arrows)
+[character]
+success_symbol = "[ ](bold fg:#81a1c1)"
+error_symbol = "[ ](bold fg:#e06c75)"
+
+# Disable the package module
+[package]
+disabled = true
+
+# Git Branch module
+[git_branch]
+style = "bg:#2b2e3e"
+symbol = "󰘬"
+truncation_length = 12
+truncation_symbol = ""
+format = " 󰜥 [](bold fg:#2b2e3e)[$symbol $branch(:$remote_branch)](fg:#c6d0f5 bg:#2b2e3e)[ ](bold fg:#2b2e3e)"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = " "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+conflicted = " 🏳 "
+ahead = " 🏎💨 "
+behind = " 😰 "
+diverged = " 😵 "
+untracked = " 🤷 "
+stashed = " 📦 "
+modified = " 📝 "
+staged = '[++\($count\)](green)'
+renamed = " ✍️ "
+deleted = " 🗑 "
+
+[hostname]
+ssh_only = false
+format = "[•$hostname](bg:#2b2e3e bold fg:#c6d0f5)[](bold fg:#2b2e3e)"
+trim_at = ".companyname.com"
+disabled = false
+
+[line_break]
+disabled = false
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+
+[time]
+disabled = true
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
+
+[username]
+style_user = "bold bg:#2b2e3e fg:#c6d0f5"
+style_root = "red bold"
+format = "[](bold fg:#2b2e3e)[$user]($style)"
+disabled = false
+show_always = true
+
+# Directory module
+[directory]
+home_symbol = " "
+read_only = "  "
+style = "bg:#212330 fg:#c6d0f5"
+truncation_length = 2
+truncation_symbol = ".../"
+format = '[](bold fg:#212330)[󰉋 → $path]($style)[](bold fg:#212330)'
+
+[directory.substitutions]
+"Desktop" = "  "
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = " 󰎈 "
+"Pictures" = "  "
+"Videos" = "  "
+"GitHub" = " 󰊤 "
+
+# Command Duration module
+[cmd_duration]
+min_time = 0
+format = '[](bold fg:#2b2e3e)[󰪢 $duration](bold bg:#2b2e3e fg:#c6d0f5)[](bold fg:#2b2e3e)'

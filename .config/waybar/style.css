@@ -1,0 +1,72 @@
+@import "colors/colors.css";
+
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+}
+
+window#waybar {
+    background-color: @bg0;
+    color: @fg;
+    border-radius: 0 0 10px 10px;
+}
+
+#workspaces {
+    min-width: 100px;
+    font-size: 0.4rem;
+    padding: 2px 4px;
+    margin: 11px 0;
+    border-radius: 99px;
+}
+
+#workspaces button {
+    background-color: @grey2;
+    color: transparent;
+    padding: 0px 5px;
+    border-radius: 99px;
+    margin: 0 2px;
+    min-width: 4px;
+}
+
+#workspaces button.active {
+    background-color: @blue;
+    min-width: 1.2rem;
+    font-weight: 800;
+    transition: all 200ms ease-in-out;
+}
+
+#clock,
+#clock#right {
+    margin: 0 12px;
+    font-weight: 700;
+    font-size: 1.14rem;
+}
+
+.modules-left {
+    margin-left: 12px;
+    font-weight: 600;
+}
+
+.modules-right {
+    margin-right: 12px;
+    font-weight: 600;
+}
+
+#custom-media {
+    margin: 0 30px;
+    font-weight: 600;
+    font-size: 1.11rem;
+}
+
+#network {
+    margin: 0 25px;
+    font-weight: 600;
+}
+
+#custom-cava {
+    font-family: "JetBrains Mono", "Nerd Font", monospace;
+    letter-spacing: 1px;
+    color: @fg;
+    margin: 0 25px;
+}
+
