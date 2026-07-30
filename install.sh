@@ -40,7 +40,8 @@ sudo pacman -S --needed --noconfirm \
 	iwd \
 	impala \
 	bluetui \
-	awww
+	awww \
+	cava
 
 echo "📁 Setting up ~/.config directories..."
 mkdir -p "$HOME/.config"
